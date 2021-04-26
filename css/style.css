@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", Arial, sans-serif;
+}
+.container{
+    width:80%;margin:auto
+}
+.row{
+    display:flex;
+    justify-content:space-between
+}
+body{
+    height:2000px
+}
+header{
+    width:100%;
+    height:750px;
+    background-image:url(../bg.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    position:relative;
+    z-index:1
+}
+header::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(45deg,#f200ff,#ffba42 );
+    opacity:0.8;
+    z-index:-1
+}
+header h2{
+    font-size:30px;
+    margin-top:20px;
+    color:#fff;
+    font-weight:500
+}
+header h2 span{
+    color:#ffd369
+}
+header ul{
+    list-style:none
+}
+header ul li{
+    display:inline-block
+}
+header ul li a{
+    font-size:18px;
+    font-weight:400;
+    text-transform: capitalize;
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:20px
+}
+header ul li a:hover{
+    color:#ffd369
+}
+header .header-content{
+    position:absolute;
+    left:0;
+    top:25%;
+    color:#fff;
+    padding:15px 0
+}
+header .header-content h3{
+    font-size:18px;
+    font-weight:400
+}
+header .header-content h1{
+    font-size:140px;
+    font-weight:700
+}
+header .header-content p{
+    margin-top:0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    width:60%
+}
+header .header-content .fas{
+    margin-top:20px;
+    font-size:40px;
+    position:relative;
+    animation-name:icoon;
+    animation-delay: 1s;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    transition:top 0.5s ease-in ;
+    -webkit-transition:top 0.5s ease-in ;
+    -moz-transition:top 0.5s ease-in ;
+    -ms-transition:top 0.5s ease-in ;
+    -o-transition:top 0.5s ease-in ;
+}
+@keyframes icoon {
+    0%{top:20px;}
+    50%{top:35px;}
+    100%{top:50px;}  
+}
+/* media header section */
+@media screen and (max-width:1025px) {
+    header{
+        background-position:bottom
+    }
+    header .header-content h1{
+        font-size:80px
+    }
+    header .header-content p{
+        width:67%
+    }
+}
+@media screen and (max-width:767px) {
+    header{
+        height:600px
+    }
+    header ul{
+        display: none
+    }
+    header .header-content h3{
+        font-size:15px
+    }
+    header .header-content h1{
+        font-size:40px;
+    }
+    header .header-content p{
+        font-size:15px;
+        width:83%
+    } 
+}
